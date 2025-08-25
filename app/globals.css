@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;700&display=swap');
+
+
+
+
+/* RTL support */
+[dir="rtl"] {
+  text-align: right;
+}
+
+[dir="rtl"] .space-x-reverse > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1;
+}
+
+/* Smooth transitions for language switching */
+* {
+  transition: all 0.3s ease;
+}
+
+/* CV specific styles for print */
+@media print {
+  .cv-a4-page {
+    width: 210mm; /* A4 width */
+    height: 297mm; /* A4 height */
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    border-radius: 0;
+    overflow: hidden; /* Ensure content fits */
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background-color: white !important;
+    margin: 0;
+    padding: 0;
+  }
+}
+@media (max-width: 299px) {
+    .hide-under-300 {
+      display: none !important;
+    }
+  }
+
+
+
+  
