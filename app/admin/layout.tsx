@@ -19,7 +19,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
     const checkSession = async () => {
       const session = await getSession();
       if (!session) {
-        router.push("/");
+        router.push("/login");
       } else {
         setLoading(false);
       }
